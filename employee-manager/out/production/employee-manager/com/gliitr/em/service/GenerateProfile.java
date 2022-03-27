@@ -21,10 +21,10 @@ public class GenerateProfile {
         System.out.println("For Technical Deptt. = 2 ");
         System.out.println("For Legal Deptt. = 3 ");
         int option = sc.nextint();
-        Employee employee = new Employee(firstName, lastName);
+        Employee employee = new Employee (firstName, lastName);
         switch (option){
             case 0:
-                employee.setdeptt("Administration");
+                employee = employee.setdeptt("Administration");
                 break;
             case 1:
                 employee.setdeptt("HR");
@@ -38,14 +38,18 @@ public class GenerateProfile {
                 break;
 
         }
+        // call ProfileGeneratorEmployee here
+
         String emailAddress =  ProfileGeneratorEmployee.generateEmailaddress(firstName,lastName,employee.getdeptt());
-        employee.generateEmailAddress(emailAddress);
+        employee.setEmailAddress(emailAddress);
 
         System.out.println("Pleaese enter the length of the password");
-        int length=scanner.nextInt(radix;());
-
+        int length = scanner.nextInt();
         String passWord = ProfileGeneratorEmployee.generatePassWord(length)}
-        Employee.setPassWord(passWord)
+        employee.setPassWord(password);
+
+// call rofileGeneratorEmployee
+        rofileGeneratorEmployee.showCredentials(employee);
 
         // close finally
         scanner.close();

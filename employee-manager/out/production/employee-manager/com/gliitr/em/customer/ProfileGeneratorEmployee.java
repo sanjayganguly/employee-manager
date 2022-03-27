@@ -24,15 +24,15 @@ public final class ProfileGeneratorEmployee {
         String seed = capitalLetters + smallLetters + numbers + specialCharacters;
         Ramdom ramdom = new Random();
 
-        if(length<8){
+        if(length < 8){
             throw new IllegalArgumentException("Password length should be a combination of at least 8 charactors");
         }
         char[] password = new char[length];
         for (int i = 0; i<length; i++){
             int randomNumber;
-            randomNumber = (ramdom.nextInt(seed.length()));
+            randomNumber = ramdom.nextInt(seed.length());
             char c = seed.charAt(randomNumber);
-            password[index] = c;
+            password[i] = c;
                  }
         return String.copyValueOf(password);
     }
